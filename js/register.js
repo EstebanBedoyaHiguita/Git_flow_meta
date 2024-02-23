@@ -26,15 +26,17 @@ function logUser() {
 
   const data = JSON.stringify(userinfo);
 
-  localStorage.setItem("users", data);
+  localStorage.setItem(`user${userName.value}`, data);
+  const sendData = JSON.parse(localStorage.getItem(`user${userName.value}`));
+  users.push(sendData);
+  console.log(users);
 }
 
 function validateInfo() {
-  if (users[0]) {
-    if (users[0].email === userEmail.value) {
+  users.forEach((user) => {
+    if (user.email == userEmail.value) {
       return false;
     }
-  }
-
+  });
   return true;
 }
