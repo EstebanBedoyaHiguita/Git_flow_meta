@@ -1,0 +1,58 @@
+@import url("https://fonts.googleapis.com/css2?family=Cookie&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Merienda:wght@300..900&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Merienda", cursive;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  background-image: url(https://unareceta.com/wp-content/uploads/2016/10/coctel-margarita.jpg) ;
+  background-repeat: no-repeat;
+  background-size: cover; 
+
+}
+.container {
+    display: flex;
+    flex-direction: row-reverse;
+}
+h1 {
+  font-family: "Cookie", cursive;
+  color: #ffffff;
+  text-shadow: 10px 1px 2px rgb(209, 191, 33);
+  font-size: 150px;
+  display: flex;
+  justify-content: center;
+  letter-spacing: 6px;
+}
+
+h2 {
+  font-family: "Cookie", cursive;
+  display: flex;
+  justify-content: end;
+  font-size: 120px;
+  color: rgb(209, 191, 33);
+  text-shadow: 3px 3px 2px #ffffff;
+  margin-right: 300px;
+  
+}
+.ingredients {
+  font-size: 25px;
+}
+.steps {
+  font-size: 30px;
+}
+.recipe {
+  display: flex;
+  flex-direction: column;
+  background-color: #ffffff;
+  color: rgb(61, 56, 6);
+  opacity: .5;
+  width: 1000px;
+  box-shadow: 0px 0px 70px 0px rgb(255, 255, 255);
+  
+}
