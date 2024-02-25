@@ -1,0 +1,179 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+/* Header */
+
+.base-info {
+  width: 100%;
+  height: 400px;
+
+  display: flex;
+  align-items: center;
+
+  overflow: hidden;
+  position: relative;
+}
+
+.base-info::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -2;
+
+  background-image: url(../imgs/BackgroundCook.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.base-info::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+
+  backdrop-filter: blur(5px);
+
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+.base-info .content-img {
+  width: 60%;
+  height: 100%;
+  display: flex;
+  justify-content: end;
+
+  overflow: hidden;
+}
+
+.base-info .content-img .img {
+  width: 600px;
+  height: 100%;
+  background-image: url(../imgs/BANDEJA-PAISA.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  /* background-position: -80px; */
+}
+
+.base-info .container-title {
+  height: 100%;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+
+  flex: auto;
+  padding-left: 50px;
+  box-shadow: 1px 1px 20px 10px black;
+}
+
+.base-info .container-title .title {
+  font-size: 4rem;
+  color: white;
+  text-shadow: 3px 3px 3px black;
+}
+
+header .btn-return {
+  width: fit-content;
+  height: fit-content;
+  position: absolute;
+  top: 5px;
+  left: 15px;
+  cursor: pointer;
+  transition: 0.6s;
+}
+
+header .btn-return:hover {
+  transform: scale(1.2);
+}
+
+header .btn-return i {
+  font-size: 50px;
+  color: white;
+}
+
+/* Main */
+main {
+  margin: auto;
+  width: 80%;
+  height: 100%;
+  padding: 30px 10%;
+  background-color: #eaeaea;
+
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+/* Ingredients */
+.ingredients-container {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+ul {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* Steps */
+.steps-info-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.steps-info-container .steps-container {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.steps-info-container .steps-container .step-item h2 {
+  margin-bottom: 10px;
+}
+
+.steps-info-container .steps-container .step-item ul {
+  list-style: none;
+}
+
+@media (width<768px) {
+  header .btn-return {
+    position: initial;
+  }
+  .base-info {
+    flex-direction: column-reverse;
+  }
+  .base-info .container-title {
+    box-shadow: none;
+    height: fit-content;
+    width: 100%;
+    padding: 0;
+
+    display: flex;
+    justify-content: space-around;
+  }
+  .base-info .container-title .title {
+    text-align: center;
+  }
+  .base-info .content-img {
+    width: 100%;
+  }
+  .base-info .content-img .img {
+    width: 100%;
+    height: auto;
+    background-position: 0px;
+  }
+}
