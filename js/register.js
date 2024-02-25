@@ -1,19 +1,19 @@
-//Selectors
+// Selectors
 import users from "../db/database.js";
 const registerForm = document.querySelector("#register");
 const userName = document.querySelector("#name");
 const userPassword = document.querySelector("#password");
 const userEmail = document.querySelector("#email");
 
-//Events
+// Events
 registerForm.addEventListener("submit", (event) => {
   event.preventDefault();
   logUser();
 });
 
-//Functions
+// Functions
 function logUser() {
-  if (!validateInfo()) {
+  if (validateInfo()) {
     alert("El correo electrónico ya está registrado");
     return;
   }
@@ -22,21 +22,17 @@ function logUser() {
     name: userName.value,
     password: userPassword.value,
     email: userEmail.value,
+    id: Math.floor(Math.random() * 10) + 1,
   };
 
   const data = JSON.stringify(userinfo);
 
-  localStorage.setItem(`user${userName.value}`, data);
-  const sendData = JSON.parse(localStorage.getItem(`user${userName.value}`));
+  localStorage.setItem(`user${userinfo.id}`, data);
+  const sendData = JSON.parse(localStorage.getItem(`user${userinfo.id}`));
   users.push(sendData);
-  console.log(users);
 }
 
 function validateInfo() {
-  users.forEach((user) => {
-    if (user.email == userEmail.value) {
-      return false;
-    }
-  });
-  return true;
+  // Utilice some instead of forEach to verify any user that has  the same email
+  return users.some((user) => user.email === userEmail.value);
 }
