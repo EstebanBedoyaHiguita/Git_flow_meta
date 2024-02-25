@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/styles/register.css" />
+    <title>Register</title>
+  </head>
+  <body>
+
+    
+    <img id="recipe-img" src="https://media.canva.com/1/image-resize/1/550_550_92_JPG_F/czM6Ly9tZWRpYS1wcml2YXRlLmNhbnZhLmNvbS9tdzQ2cy9NQUY5d01tdzQ2cy8xL3AuanBn?osig=AAAAAAAAAAAAAAAAAAAAABOLNdqVICzNKglxB-6JjHdJh0SnOPrMrXwO4e4UV2t9&exp=1708837700&x-canva-quality=thumbnail_large&csig=AAAAAAAAAAAAAAAAAAAAAH4S2jZKh1xxE4TFK6UgBcTf4ntJAP8dhScKDfyO808C" alt="recipe">
+    
+    <form id="register">
+      <h1>Sign up!</h1>
+      <div class="form-group">
+        <label for="name">Name: </label>
+        <input
+          class="input-form"
+          maxlength="8"
+          type="text"
+          id="name"
+          placeholder="Your name..."
+          required
+        />
+      </div>
+
+      <div class="form-group">
+        <label for="password">Password: </label>
+        <input
+          class="input-form"
+          maxlength="8"
+          type="password"
+          id="password"
+          placeholder="Your password..."
+          required
+        />
+      </div>
+
+      <div class="form-group">
+        <label for="email">Email: </label>
+        <input
+          class="input-form"
+          type="email"
+          id="email"
+          placeholder="Your email..."
+          required
+        />
+      </div>
+
+      <button id="register-btn" type="submit">Log me</button>
+    </form>
+
+    <script type="module" src="./js/register.js"></script>
+  </body>
+</html>
