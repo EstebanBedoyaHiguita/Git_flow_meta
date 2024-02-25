@@ -63,7 +63,7 @@
   background-image: url(../imgs/BANDEJA-PAISA.jpg);
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: -80px;
+  /* background-position: -80px; */
 }
 
 .base-info .container-title {
