@@ -1,3 +1,21 @@
+::-webkit-scrollbar{
+    width: 10px;
+    border-radius: 20px;
+    background-color:  #ffffff00;
+}
+
+::-webkit-scrollbar-track{
+    box-shadow: inset 0 0 5px grey; 
+    border-radius: 20px;
+}
+
+
+::-webkit-scrollbar-thumb{
+    background-color: #21313a;
+    border-radius: 20px;
+}
+
+
 
 *{
     margin: 0px;
@@ -7,25 +25,41 @@
 /* pagina */
 .paginaPrincipal{
     display: flex;
-    height: 100vh;
-    background-image: url(../img/fondoTacos.jpg);
-    background-repeat: no-repeat;
-    background-size: 100% 100vh;
+    height: auto;
+    min-height: 100vh;
     
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    object-fit: cover;
     align-items: center;
     justify-content: end;
+    animation: targeta normal 1.5s;
+}
+
+.paginaTacos{
+    background-image: url(https://images.pexels.com/photos/2092507/pexels-photo-2092507.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
+}
+
+.paginaChilaquiles{
+    background-image: url(https://images.pexels.com/photos/10305696/pexels-photo-10305696.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
+}
+
+.paginaChili{
+    background-image: url(https://img.freepik.com/foto-gratis/sabrosa-comida-mexicana-salsa-aguacate-fresco-burittos-tacos-chili-carne-mesa-madera_1220-7062.jpg?w=740&t=st=1708910592~exp=1708911192~hmac=ebace9b43002bc501a51b79e4f866bfff90587466039aeed7391e87c85638b49);
 }
 
 .targetaPrincipal{
     display: flex;
     flex-direction: column;
     margin: 20px;
-    background-color: rgba(245, 245, 245, 0.623);
+    background-color: rgba(245, 245, 245, 0.5);
     filter: blur(1);
     border-radius: 20px;
-    width: 75rem;
-    height: 55rem;
-    animation: targeta normal 1.5s;
+    width: auto;
+    max-width:  75%;
+    min-height: 20rem;
+    height: auto;
+
 
 }
 
@@ -36,9 +70,11 @@
     display: flex;
     justify-content: space-around;
     align-items: center;
+    flex-wrap: wrap;
     width: 100%;
-    height: 10rem;
-    background-color: rgba(245, 245, 245, 0.801);
+    height: auto;
+    min-height: 10rem;
+    background-color: rgba(245, 245, 245, 0.705);
     border-top-right-radius: 20px;
     border-top-left-radius: 20px;
 }
@@ -49,9 +85,20 @@
     font-optical-sizing: auto;
     font-style: normal;
     font-size: 7rem;
-    color: #2e2211;
-    text-shadow: 3px 3px 3px #ECB159;
+    color: #000000;
 
+}
+
+.tituloTacos{
+    text-shadow: 5px 5px 2px #ECB159;
+}
+
+.tituloChilaquiles{
+    text-shadow: 5px 5px 2px #cf5454;
+}
+
+.tituloChili{
+    text-shadow: 5px 5px 2px #508D69;
 }
 
 .iconosPagina{
@@ -73,16 +120,78 @@
 
 /* cuerpo de la targeta */
 .mainTargeta{
-    height: 45rem;
+    display: flex;
+    justify-content: center;
+    height: auto;
+    max-height: 90%;
+    width: auto;
+    padding: 10px;
+    gap: 10px;
+}
+
+.descripcion{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: auto;
+    max-width:  45%;
+    border-radius: 20px;
+    padding: 20px;
+    background-color: rgba(245, 245, 245, 0.705);
+}
+
+.info{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: auto;
+    max-width: 50%;
+}
+
+.material{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: auto;
+    border-radius: 20px;
+    padding: 20px;
+    background-color: rgba(245, 245, 245, 0.705);
+}
+
+.video{
+    display: flex;
+    justify-content: center;
+    width: auto;
+}
+
+iframe{
     width: 100%;
+    height: auto;
+    min-height: 200px;
 }
 
 @keyframes  targeta{
     from {
         opacity: 0;
     }
-    
+
     to {
         opacity: 1;
     }
+}
+
+@keyframes reversa {
+    from{
+        opacity: 1;
+    }
+
+    to{
+        opacity: 0;
+    }
+}
+
+.desactivado{
+    filter: contrast(100%) brightness(20%);
+    width: 7rem;
+    height: auto;
 }
