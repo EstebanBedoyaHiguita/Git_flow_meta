@@ -2,21 +2,71 @@
 <html lang="en">
 	<head>
 		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Login</title>
 		<link rel="stylesheet" href="./styles/login.css" />
 	</head>
+
 	<body>
-		<form id="form-login" class="form-login">
-			<div class="container">
-				<label for="email">Email</label>
-				<input type="email" id="email" />
+		<header class="header">
+			<nav class="navigation">
+				<a href="" class="__item --nuevo text-body--1"> New User </a>
+			</nav>
+			<a href="../index.html">
+				<img
+					class="__home"
+					src="https://cdn-icons-png.freepik.com/256/846/846551.png"
+					alt="home"
+				/>
+			</a>
+		</header>
+
+		<main class="main">
+			<div class="__heading">
+				<h1 class="text-heading--1">Login</h1>
 			</div>
-			<div class="container">
-				<label for="password">Password</label>
-				<input type="password" id="password" />
+			<form class="__form" id="formLogin" action="" method="post">
+				<div class="__field">
+					<label class="__label text-body--1" for="email">Email:</label>
+					<input
+						class="__input text-body--1"
+						type="email"
+						id="email"
+						name="email"
+						required
+					/>
+				</div>
+
+				<div class="__field">
+					<label class="__label text-body--1" for="password">Password:</label>
+					<input
+						class="__input text-body--1"
+						type="password"
+						id="password"
+						name="password"
+						required
+					/>
+				</div>
+
+				<button class="__button">
+					<span class="text-body--1">Login</span>
+				</button>
+			</form>
+			<div>
+				<p id="opt" class="text-body--1">or you can also:</p>
 			</div>
-		</form>
+			<div class="__buttons">
+				<button class="__button1">
+					<img
+						class="__img"
+						src="https://cdn-icons-png.freepik.com/256/725/725289.png?ga=GA1.1.1530716631.1708913930&"
+						alt="Facebook"
+					/>
+					<span class="text-body--1">Login with Fb</span>
+				</button>
+			</div>
+		</main>
 		<script src="./js/login.js"></script>
 	</body>
 </html>
